@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>8 Machine learning and artificial intelligence | A culture for doing good things with data</title>
+<meta name="author" content="Chad Heilig">
+<meta name="description" content="CDC should think about machine learning (ML) as a collection of data-analytic methods (most of them decades old) akin to statistical methods. This collection of methods extends the set of tools...">
+<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta property="og:title" content="8 Machine learning and artificial intelligence | A culture for doing good things with data">
+<meta property="og:type" content="book">
+<meta property="og:description" content="CDC should think about machine learning (ML) as a collection of data-analytic methods (most of them decades old) akin to statistical methods. This collection of methods extends the set of tools...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8 Machine learning and artificial intelligence | A culture for doing good things with data">
+<meta name="twitter:description" content="CDC should think about machine learning (ML) as a collection of data-analytic methods (most of them decades old) akin to statistical methods. This collection of methods extends the set of tools...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+        }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="The why, what, how, and who of a progressive culture for data in public health">A culture for doing good things with data</a>:
+        <small class="text-muted">The why, what, how, and who of a progressive culture for data in public health</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface: On doing good things with data</a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction: Why, what, how, and who</a></li>
+<li><a class="" href="why.html"><span class="header-section-number">2</span> Why</a></li>
+<li><a class="" href="what.html"><span class="header-section-number">3</span> What</a></li>
+<li><a class="" href="how.html"><span class="header-section-number">4</span> How</a></li>
+<li><a class="" href="who.html"><span class="header-section-number">5</span> Who</a></li>
+<li><a class="" href="redux.html"><span class="header-section-number">6</span> Redux: Who, how, what, and why</a></li>
+<li><a class="" href="i-get-to-do-data-science.html"><span class="header-section-number">7</span> I get to do data science</a></li>
+<li><a class="active" href="ml-ai.html"><span class="header-section-number">8</span> Machine learning and artificial intelligence</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="declaration.html"><span class="header-section-number">A</span> Declaration: a progressive culture for data in public health</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="ml-ai" class="section level1" number="8">
+<h1>
+<span class="header-section-number">8</span> Machine learning and artificial intelligence<a class="anchor" aria-label="anchor" href="#ml-ai"><i class="fas fa-link"></i></a>
+</h1>
+<p>CDC should think about machine learning (ML) as a collection of data-analytic
+methods (most of them decades old) akin to statistical methods. This collection
+of methods extends the set of tools that we have for extracting information from
+data and putting that extracted information to use, typically for finding
+patterns in data or guessing a likely output based on a set of inputs.
+Artificial intelligence (AI), in current practice, applies ML and other
+data-analytic methods to automate or assist with various tasks, especially
+repetitive tasks. Indeed, it is because AI follows largely from applications of
+ML that I write the pair as “ML/AI” rather than the opposite: ML leads and
+grounds AI.</p>
+<p>Like other data-analytic methods, ML methods should be used with critical
+reflection: How well does a model perform on new data? How well does it hold up
+under different assumptions? Does it perform consistent with norms like
+fairness? As an application of those methods, AI should be subject to the same
+critical reflection and norms.</p>
+<p>ML and AI can be simple or complex, but they don’t have to be mysterious. CDC
+should use these wherever they help CDC achieve its mission better. CDC should
+not, however, use these tools just for the sake of it, just to satisfy a
+consultant’s recommendation, or just to appear modern.</p>
+<p>The following discussion proposes how to demystify ML and AI by establishing
+them in context: where ML/AI fit in with more familiar, related concepts; were
+ML/AI fit in with related data-oriented methods; where ML/AI fit in history;
+where ML/AI might fit in a data-supportive organization; and where ML/AI have
+already been practiced by CDC/ATSDR.</p>
+<div id="context-what-is-familiar-or-known" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> Context: what is familiar or known<a class="anchor" aria-label="anchor" href="#context-what-is-familiar-or-known"><i class="fas fa-link"></i></a>
+</h2>
+<p>People who have no direct experience with ML and AI especially conceive of ML
+and AI in many ways that don’t relate very closely to what CDC might do with
+them. For example, I have heard it sincerely posited that ML is about
+robots—literally, machines learning. Some machine learning approaches do
+support robots, but that’s not the most common or important meaning for CDC’s
+purposes.</p>
+<p>ML has been described as answering the question, “How can computers learn to
+solve problems without being explicitly programmed?” <span class="citation">(<a href="#ref-koza_automated_1996">Koza et al. 1996</a>)</span> I
+don’t find that formulation especially useful for people who aren’t already
+familiar with the idea. Let’s rephrase this question as “How can computers look
+at examples and figure out patterns that can be applied to new data?” Those
+examples that computers look at are data, and “figure out patterns” means the
+use of algorithms to develop a model or representation for those patterns. In
+other words, <strong>ML is a collection of data-analytic methods, typically used for
+finding patterns in data or guessing a likely output based on a set of inputs.</strong></p>
+<ul>
+<li><p>Finding patterns in data could involve putting counties into groups that are
+demographically similar or grouping tweets on a common topic.
+Pattern-finding tasks, called unsupervised learning, include methods such as
+cluster analysis or topic modeling.</p></li>
+<li><p>Guessing a likely output based on a set of inputs is also known as
+prediction; it could entail a best guess at whether a child meets the
+surveillance case definition of autism given just the words of their
+educational and psychological evaluations. Output-oriented tasks, called
+supervised learning, include methods such as regression and classification.</p></li>
+</ul>
+<p>In publications that apply machine learning to public health issues,
+classification has appeared far more commonly than the other tasks, often as an
+application for separating cases from noncases.</p>
+<p>An initial note on the word “prediction” in the previous paragraph: In the
+context described above, prediction focuses on relating an outcome—the
+predicted value—to corresponding given inputs, typically called “features”. In
+contrast with its everyday use, the word “prediction” in this context might or
+might not have anything to do with the future. In the autism example above, a
+child’s current case status is predicted from their existing evaluations. As
+another example, a model could be constructed to predict who will receive a
+Parkinson’s disease diagnosis given their past claims history; this example
+includes a time component and a sense of the future, but even in this example,
+the model is developed from past data and continuously evaluated against future
+accumulating data.</p>
+<p>Since ML focuses on using data for these tasks, it should be thought of
+principally as an analytic application, subject to scientific norms the same as
+or similar to the norms applied to other empirical, analytic approaches, like
+statistics or causal inference. (See section <a href="how.html#technical-skills">4.2</a>.)</p>
+<p>In predominant current practice, <strong>AI is the application of ML to automate or
+assist with recurring tasks</strong>, especially scaling up repetitive tasks, such as
+assessing a patient’s possible case status given their electronic health record.
+AI should be thought of principally as an application of technology, but the
+underlying ML should still be subject to scientific norms for data analysis.</p>
+<p>In summary, we can think of ML (approximately) as data-analytic methods or
+practices and AI as the results of those data-analytic methods or practices
+deployed as applications to automate or assist with recurring tasks, especially
+when repeated at a large scale.</p>
+</div>
+<div id="context-methodology" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> Context: methodology<a class="anchor" aria-label="anchor" href="#context-methodology"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ml-and-statistics" class="section level3" number="8.2.1">
+<h3>
+<span class="header-section-number">8.2.1</span> ML and statistics<a class="anchor" aria-label="anchor" href="#ml-and-statistics"><i class="fas fa-link"></i></a>
+</h3>
+<p>As briefly mentioned above, ML should be put into the context of other
+data-analytic practices, including classical statistical analysis and causal
+inference, among others. This is true all the more because ML and statistical
+methods overlap. For example, logistic regression can be applied to a binary
+classification task (as an ML method) or to the task of estimating the
+probability of an outcome being present or absent given covariate values (as a
+common statistical method).</p>
+<p>ML tends to focus on model performance, such as a measure of how well an output
+can be associated with inputs, especially inputs that the ML hasn’t seen yet;
+this is called out-of-sample performance. In contrast, statistical applications
+tend to focus on the internal structure and goodness-of-fit of the analytic
+model, typically intending to assist with explanation. This contrast is
+sometimes described in terms of ML focusing on <span class="math inline">\(\widehat{y}\)</span>, denoting the
+estimated value of the response, and statistics focusing on <span class="math inline">\(\widehat{\beta}\)</span>,
+denoting estimated model parameters, such as regression coefficients.</p>
+<p>ML tends to handle complex or nontraditional data structures better than common
+statistical methods do, including images, free text, and electronic health
+records, but statistical models can also be large or complex. Statistical models
+are typically based on explicitly constructed probability models; although such
+models can be large or complex, the size and complexity might be constrained to
+facilitate interpretability of the model. In contrast, since ML models tend to
+focus on performance rather than interpretability, complexity in and of itself
+is more acceptable when added model complexity improves model performance and
+avoids the disadvantages of overfitting.</p>
+<p>ML tends to handle larger numbers of inputs, hence larger numbers of model
+parameters, better than common statistical methods. In traditional statistical
+practice, several heuristics might be used to constrain model size, including
+stepwise variable selection, best-of-all-subsets regression, and penalties that
+force a tradeoff between model fit and model size. ML methods deal with
+potentially large numbers of inputs in 2 main ways: feature engineering, which
+seeks to derive more performative inputs from old inputs (one example being
+principal components), and regularization, which trades off between model
+performance and model size by figuring out ways to downweight or upweight inputs
+for optimizing out-of-sample performance. To be sure, statistical models can and
+do use some of the techniques described here for ML models.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="25%">
+<col width="37%">
+<col width="37%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th align="left"><strong>Machine learning tendencies</strong></th>
+<th align="left"><strong>Statistics tendencies</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Model</td>
+<td align="left">Model performance, especially for associating outputs <span class="math inline">\((\widehat{y})\)</span> with inputs <span class="math inline">\((x)\)</span>
+</td>
+<td align="left">Model structure and fit <span class="math inline">\((\widehat{\beta})\)</span>; “interpretability”</td>
+</tr>
+<tr class="even">
+<td>Data structure</td>
+<td align="left">Complex or nontraditional data, such as free text</td>
+<td align="left">Highly structured data, especially tabular</td>
+</tr>
+<tr class="odd">
+<td>Data breadth</td>
+<td align="left">Large number of inputs, complex models</td>
+<td align="left">Constraints on number of inputs or model complexity</td>
+</tr>
+</tbody>
+</table></div>
+<p>I have listed 3 main contrasts between ML and statistics: (1) a focus on model
+performance vs model fit, (2) facility for complex or nontraditional data
+structures, and (3) facility for larger numbers of inputs. These are not sharp,
+exclusive distinctions, and they are not the only distinctions. Even with these
+differences in orientation and approach, ML, statistical, and other
+data-analytic models should be subjected to similar levels of scrutiny and
+rigor, as well as other norms such as accuracy (and its many variations),
+fairness, bias mitigation, interpretability, and explainability. Of note,
+interpretability and explainability can be distractions, as apparently
+interpretable models are not necessarily closer to being true than complex or
+obscure models.</p>
+<p>Just as ML should be put into the context of other data-analytic methods and
+practices, AI should be put into the context of other data-analytic
+applications. Although AI is often implemented to automate and assist with tasks
+at scale, such as decision-making, other data-analytic methods similarly
+undergird practical applications. For example, the Framingham risk score,
+commonly used in medical practice, was derived from empirical data on thousands
+of participants. Many other algorithms were similarly empirically derived. Those
+applications and AI applications share some common concerns:</p>
+<ul>
+<li><p>Do the underlying data-analytic models conform to scientific norms?</p></li>
+<li><p>Are the models subject to undue bias or other characteristics that could
+affect or limit their applicability?</p></li>
+<li><p>Do those limitations breach ethical, legal, or social norms, for example, by
+imposing or leading to unfair conditions or outcomes?</p></li>
+</ul>
+<p>Most of these concerns pertain to algorithmic decision-making in general rather
+than AI in particular. Some unique concerns, however, arise from the potential
+for AI applications to be especially complex or dynamic by continuing to learn
+from accruing data, such as challenges in identifying conditions or sets of
+input values under which the model performs especially poorly or identifying
+changes in model performance as training data accumulate over time.</p>
+</div>
+<div id="on-predictive-analytics-ml-and-ai" class="section level3" number="8.2.2">
+<h3>
+<span class="header-section-number">8.2.2</span> On “predictive analytics”, ML, and AI<a class="anchor" aria-label="anchor" href="#on-predictive-analytics-ml-and-ai"><i class="fas fa-link"></i></a>
+</h3>
+<p>In the early days of CDC’s Public Health Data Strategy, it was asserted that
+“predictive analytic tools such as machine learning” hold the answers for
+modernization. The assertion seems to assume that perfect, high-speed data can
+inevitably support informed action to intervene in public health, especially
+outbreaks, if only the best methods are used. For example, one presentation said
+that “the reality” is “looking back: using data to see what has already
+happened” and “the opportunity” is “looking forward: using data to <strong>predict and
+prevent threats</strong>” (original emphasis). The same presentation asserted the goal
+“to transform CDC and our partners from a culture of primarily historical data
+analytics to predictive data science …”.</p>
+<p>No doubt better data should lead to better learning, but analytic methods must
+also adequately account for the limits of information inherent in the
+combination of data and methods; otherwise, we risk mismatching expectations
+with realistic possibility. An emphasis on “predictive analytics” does not
+acknowledge the real limits of even the best data and tips over into a (likely
+unintended) undervaluing of cumulatively understanding history. AI might or
+might not aid in making better decisions. Data-analytic workflows can improve
+our ability to forecast, anticipate, and preemptively intervene, but we should
+take care not to tip the balance too far. Even when we are able to attend as
+completely as possible to forward-looking workflows, we will still be
+<strong>primarily</strong> (my emphasis) looking back to see what has already happened.
+Getting smarter and more nimble about the future still requires us to remain
+rooted in history. I would like to see a responsible treatment of how to use all
+available tools—classical and conventional, statistics and machine learning,
+correlation and causation—and those yet to be available, to achieve public
+health practice that is less exclusively reactive and reactionary.</p>
+</div>
+</div>
+<div id="context-history" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> Context: history<a class="anchor" aria-label="anchor" href="#context-history"><i class="fas fa-link"></i></a>
+</h2>
+<p>The January 2022 report <em>Protecting the Integrity of Government Science</em> by the
+Scientific Integrity Fast-Track Action Committee states:</p>
+<blockquote>
+<p>New technology and new approaches to science—such as big data analytics, AI,
+and ML—have become central to many areas of science and Federal
+decision-making. While these technological advances provide opportunities to
+more deeply and efficiently learn about the world, they also present unique
+challenges and complexities for ensuring scientific integrity. …
+Additionally, scientific integrity policies can be extended to offices and
+work units not traditionally focused on research and that make use of the
+results of AI and ML-based analyses.”
+<span class="citation">(<a href="#ref-scientific_integrity_fast-track_action_committee_protecting_2022">Scientific Integrity Fast-Track Action Committee 2022</a>, p 27-28)</span></p>
+</blockquote>
+<p>This passage includes a rare and important acknowledgment that data analyses,
+including those that are nonresearch, should come under policies for scientific
+integrity. Like the “predictive analytics” example above, however, it overstates
+the “new approaches” and “unique challenges and complexities” stemming from ML
+and AI. Although AI can introduce complex issues in assistance and automation
+technologies, the upstream issues that arise from data analysis are not
+especially unique to ML or AI.</p>
+<p>People at CDC often talk about ML and AI as new methods or new technology. Some
+methods, especially those associated with deep learning, are relatively new and
+yet their potential is familiar because of their widespread use in search
+engines and smartphones. But other methods and uses for ML go back decades. For
+example, early neural networks became popular in the 1980s, classification and
+regression trees were publicized in 1984, support vector machines in the 1990s,
+and random forests in 2001. This isn’t a quibble about history so much as
+encouragement to see these methods as perhaps unfamiliar rather than new, and to
+realize that all these methods have been subjected to vigorous, and often
+rigorous, analysis, testing, and scrutiny. Thus, they can be applied with
+normative confidence similar to more familiar methods of comparable complexity
+as well as subject to similar scrutiny.</p>
+<p>As mentioned above, while ML and AI can be more complex than familiar
+statistical methods and their applications, ML and AI inherit longstanding
+issues common to other forms of data analysis and applications, including bias
+and privacy concerns. In that regard, all data and analytic efforts should take
+care to elucidate potential biases and to promote transparency. Where the data
+are complex or the methods are complex, these efforts warrant special attention
+and perhaps special methods because of the <em>complexity</em>. Whether complex
+Bayesian methods, methods using rich electronic health records, multilevel
+surveys, data synthesized from sources of varying content and quality, all
+complex data and complex methods warrant critical scientific thinking and
+problem-solving, not because they use ML or AI. In contrast, if concerns arise
+from uncritical reliance on assistive or automating algorithms, then the unique
+criticism inheres more to that uncritical reliance than to the algorithms
+themselves.</p>
+<p>Furthermore, many ML methods have already been applied to public health problems
+in hundreds of published, peer-reviewed manuscripts. Many dozens of those
+manuscripts have either included an author with CDC or ATSDR affiliation or have
+resulted from a project funded by CDC/ATSDR. See, for example, <span class="citation">Goertzel et al. (<a href="#ref-goertzel_combinations_2006">2006</a>)</span>,
+<span class="citation">Holt et al. (<a href="#ref-holt_spatial_2009">2009</a>)</span>,
+<span class="citation">Menon et al. (<a href="#ref-menon_multivariate_2014">2014</a>)</span>,
+<span class="citation">Gu et al. (<a href="#ref-gu_use_2015">2015</a>)</span>,
+<span class="citation">Petersen et al. (<a href="#ref-petersen_super_2015">2015</a>)</span>,
+<span class="citation">Bertke et al. (<a href="#ref-bertke_comparison_2016">2016</a>)</span>,
+<span class="citation">Ladd-Acosta et al. (<a href="#ref-ladd-acosta_presence_2016">2016</a>)</span>,
+<span class="citation">Maenner et al. (<a href="#ref-maenner_development_2016">2016</a>)</span>,
+<span class="citation">Rubaiyat et al. (<a href="#ref-rubaiyat_automatic_2016">2016</a>)</span>,
+<span class="citation">Arnold et al. (<a href="#ref-arnold_measuring_2017">2017</a>)</span>,
+<span class="citation">Goldstick et al. (<a href="#ref-goldstick_development_2017">2017</a>)</span>,
+<span class="citation">Kracalik et al. (<a href="#ref-kracalik_modeling_2017">2017</a>)</span>,
+<span class="citation">Bowen et al. (<a href="#ref-bowen_ability_2018">2018</a>)</span>,
+<span class="citation">Meyers et al. (<a href="#ref-meyers_applying_2018">2018</a>)</span>,
+<span class="citation">Yanamala et al. (<a href="#ref-yanamala_sparse_2018">2018</a>)</span>,
+<span class="citation">Lee, Levin, et al. (<a href="#ref-lee_chief_2019">2019</a>)</span>,
+<span class="citation">Lee, Maenner, et al. (<a href="#ref-lee_comparison_2019">2019</a>)</span>, and
+<span class="citation">Wheeler (<a href="#ref-wheeler_bayesian_2019">2019</a>)</span>.
+These publications span applications to infectious and noninfectious conditions
+as well as cross-cutting areas like syndromic surveillance. They entail ML
+methods that include regularized regression, decision trees and tree-based
+ensembles (like random forests and gradient-boosting machines), support vector
+machines, other ensemble methods (like the super learner), and a variety of
+shallow and deep neural network architectures. Although the majority of
+publications use supervised learning methods, especially classification, a
+sizable subset use unsupervised methods, such as topic modeling.</p>
+<p>In the current context, CDC is positioned to continue contributing rigorous work
+that employs ML methods, especially as the base of R and Python users grows
+within the agency to take advantage of high-quality, open-source tools. CDC’s
+greater technical challenges at the moment entail incremental uptake of
+cloud-enabled technologies and supporting operations for deploying trained
+models, especially deep learning models that use graphics processing unit (GPU)
+hardware. Early efforts with proven models have been stymied by procedural
+glitches that prevent real implementation as AI. Nonetheless, because AI is
+seeing an ever-expanding collection of useful applications in clinical medicine,
+the prospects are strong for public health applications. For example, methods
+for using rich, possibly messy electronic health records hold promise for
+applications as varied as self-adapting triggers for electronic case reporting,
+enriching the use of emergency departments and other sources for syndromic
+surveillance, and forecasting the population prevalence of a wide variety of
+conditions, including autism spectrum disorder and Parkinson’s disease. ML might
+or might not help with general forecasting and outbreak analysis, as other
+statistical methods could be suited for those purposes and warrant as much
+developmental attention as ML does.</p>
+</div>
+<div id="context-organizational-culture" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> Context: organizational culture<a class="anchor" aria-label="anchor" href="#context-organizational-culture"><i class="fas fa-link"></i></a>
+</h2>
+<p>As we try to imagine the possible applications for ML and AI to CDC’s mission,
+we should also conceptualize how ML and AI are normalized within the
+organizational structure. It has already happened, and will continue to happen,
+that every center at CDC uses ML in some way. Yet there is no central leadership
+on ML or AI.</p>
+<p>Foremost, because ML undergirds AI, and because ML and other data-analytic
+approaches should be similarly subject to scientific norms, it follows that ML
+rather than AI should drive both growth and practice. If CDC promotes AI out of
+balance with ML, then we risk deploying technologies and purported solutions
+that do not hold up to scientific scrutiny, where out-of-sample performance,
+bias, and drift go underappreciated and undermine scientific integrity.</p>
+<p>Furthermore, efforts to fortify workforce capacity should focus primarily on
+analytic literacy, including critical thinking and assessment. While CDC
+unquestionably needs ML engineers and other technology-adept skills, those roles
+and skills need to be carried out within the bounds of credible scientific
+practice. I draw here on the more general discussion in section <a href="how.html#how">4</a> on
+how to foster a culture for doing good things with data by investing in
+technical skills, nontechnical skills, and community, tailored here to ML and
+AI. Many of these skills already exist in CDC’s existing workforce, largely
+underrecognized and underappreciated. If CDC can come to recognize and
+appreciate existing technical and nontechnical skills among current federal
+employees, fellows and other learners, and nonfederal staff, then we can build
+on those skills faster. Moreover, as we work toward expanding capacity in ML and
+AI, we should include current data-analytic practitioners (including those who
+use ML) in <em>leading</em> those efforts. Finally, as we build capacity, we need to
+balance innovation with a respect for history. While we should continue to
+expand the set of tools available to us for learning from data and building
+things using data, we can’t afford to lose sight of existing methods that also
+serve our purposes.</p>
+<p>The Department of Health and Human Services locates AI leadership within its
+<a href="https://www.hhs.gov/about/agencies/asa/ocio/ai/index.html">Office of the Chief Information
+Officer</a>. In my view,
+this office is predicated on some fundamental category errors that threaten to
+constrain or misdirect efforts to use and apply the full set of methods for
+learning from data and building things with data. The office’s very definition
+of ML as “a type of artificial intelligence” <span class="citation">(<a href="#ref-hhs_ocio_trustworthy_2021">HHS OCIO 2021</a>)</span>
+obscures more than it reveals. This framing has precedent, as when MIT’s
+management school presents ML as a subfield of artificial intelligence
+<span class="citation">(<a href="#ref-brown_machine_2021">Brown 2021</a>)</span>. As I argued above, because ML methods “learn” from data,
+ML is about data analysis; I further argue that ML should be judged in ways
+similar to other empirical, specifically data-analytic, approaches. It is
+important to see ML as connected to the full range of data-analytic methods and
+tools, for at least 2 reasons: (1) Statistical and machine learning methods, and
+other data-analytic methods (such as causal inference), all have formal methods
+for characterizing performance and optimization, and those methods connect
+across fields. ML is not just a set of methods unto itself, but it emphasizes
+characteristics that differ from other domains. (2) By subsuming ML under AI, we
+lose the understanding that even conventional, classical statistical methods can
+drive AI, and we risk burdening ML practice more broadly. Without that grounding
+in science and related norms, ML and AI risk giving too much privilege to model
+performance. Indeed, the move to delimit “trustworthy” AI seeks out
+trustworthiness norms for this reason. While important concerns arise from
+implementing algorithms to assist or to automate, we can and should distinguish
+upstream issues, for example, that stem from input data or from model structure.</p>
+<p>If CDC develops central leadership on ML and AI, it should <em>not</em> follow HHS’s
+lead by aligning ML/AI primarily with technology. Instead, CDC should align
+ML/AI primarily with the practice of science, specifically data-intensive
+science, with all the norms that that entails. As I argued above, technology
+should take its lead from scientific interests. Technology can help to show what
+is possible, but it should neither push nor limit what is possible, within
+resource and security constraints. Technology should respond to and empower
+scientific advances.</p>
+
+</div>
+</div>
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-arnold_measuring_2017" class="csl-entry">
+Arnold BF, Laan MJ van der, Hubbard AE, Steel C, Kubofcik J, Hamlin KL, Moss DM, Nutman TB, Priest JW, Lammie PJ. 2017-05. Measuring changes in transmission of neglected tropical diseases, malaria, and enteric pathogens from quantitative antibody levels. <em>PLoS Neglected Tropical Diseases</em>. 11(5):e0005616. <a href="https://doi.org/10.1371/journal.pntd.0005616">https://doi.org/10.1371/journal.pntd.0005616</a>
+</div>
+<div id="ref-bertke_comparison_2016" class="csl-entry">
+Bertke SJ, Meyers AR, Wurzelbacher SJ, Measure A, Lampl MP, Robins D. 2016-03. Comparison of methods for auto-coding causation of injury narratives. <em>Accident Analysis &amp; Prevention</em>. 88:117–123. <a href="https://doi.org/10.1016/j.aap.2015.12.006">https://doi.org/10.1016/j.aap.2015.12.006</a>
+</div>
+<div id="ref-bowen_ability_2018" class="csl-entry">
+Bowen DA, Mercer Kollar LM, Wu DT, Fraser DA, Flood CE, Moore JC, Mays EW, Sumner SA. 2018-10. Ability of crime, demographic and business data to forecast areas of increased violence. <em>International Journal of Injury Control and Safety Promotion</em>. 25(4):443–448. <a href="https://doi.org/10.1080/17457300.2018.1467461">https://doi.org/10.1080/17457300.2018.1467461</a>
+</div>
+<div id="ref-brown_machine_2021" class="csl-entry">
+Brown S. 2021-04. Machine learning, explained. <a href="https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained">https://mitsloan.mit.edu/ideas-made-to-matter/machine-learning-explained</a>
+</div>
+<div id="ref-goertzel_combinations_2006" class="csl-entry">
+Goertzel BN, Pennachin C, De Souza Coelho L, Gurbaxani B, Maloney EM, Jones JF. 2006-04. Combinations of single nucleotide polymorphisms in neuroendocrine effector and receptor genes predict chronic fatigue syndrome. <em>Pharmacogenomics</em>. 7(3):475–483. <a href="https://doi.org/10.2217/14622416.7.3.475">https://doi.org/10.2217/14622416.7.3.475</a>
+</div>
+<div id="ref-goldstick_development_2017" class="csl-entry">
+Goldstick JE, Carter PM, Walton MA, Dahlberg LL, Sumner SA, Zimmerman MA, Cunningham RM. 2017-05. Development of the <span>SaFETy</span> score: <span>A</span> clinical screening tool for predicting future firearm violence risk. <em>Annals of Internal Medicine</em>. 166(10):707–714. <a href="https://doi.org/10.7326/M16-1927">https://doi.org/10.7326/M16-1927</a>
+</div>
+<div id="ref-gu_use_2015" class="csl-entry">
+Gu W, Vieira AR, Hoekstra RM, Griffin PM, Cole D. 2015-10. Use of random forest to estimate population attributable fractions from a case-control study of <span>Salmonella</span> enterica serotype <span>Enteritidis</span> infections. <em>Epidemiology and Infection</em>. 143(13):2786–2794. <a href="https://doi.org/10.1017/S095026881500014X">https://doi.org/10.1017/S095026881500014X</a>
+</div>
+<div id="ref-hhs_ocio_trustworthy_2021" class="csl-entry">
+HHS OCIO. 2021-09. Trustworthy <span>AI</span> <span>Playbook</span>. <a href="https://www.hhs.gov/sites/default/files/hhs-trustworthy-ai-playbook.pdf">https://www.hhs.gov/sites/default/files/hhs-trustworthy-ai-playbook.pdf</a>
+</div>
+<div id="ref-holt_spatial_2009" class="csl-entry">
+Holt AC, Salkeld DJ, Fritz CL, Tucker JR, Gong P. 2009-12. Spatial analysis of plague in <span>California</span>: Niche modeling predictions of the current distribution and potential response to climate change. <em>International Journal of Health Geographics</em>. 8(1):38. <a href="https://doi.org/10.1186/1476-072X-8-38">https://doi.org/10.1186/1476-072X-8-38</a>
+</div>
+<div id="ref-koza_automated_1996" class="csl-entry">
+Koza JR, Bennett FH, Andre D, Keane MA. 1996. Automated design of both the topology and sizing of analog electrical circuits using genetic programming. In: Gero JS, Sudweeks F, editors. <em>Artificial <span>Intelligence</span> in <span>Design</span> ’96</em>. Dordrecht: Springer Netherlands; p. 151–170. <a href="https://doi.org/10.1007/978-94-009-0279-4_9">https://doi.org/10.1007/978-94-009-0279-4_9</a>
+</div>
+<div id="ref-kracalik_modeling_2017" class="csl-entry">
+Kracalik IT, Kenu E, Ayamdooh EN, Allegye-Cudjoe E, Polkuu PN, Frimpong JA, Nyarko KM, Bower WA, Traxler R, Blackburn JK. 2017-10. Modeling the environmental suitability of anthrax in <span>Ghana</span> and estimating populations at risk: <span>Implications</span> for vaccination and control. <em>PLoS Neglected Tropical Diseases</em>. 11(10):e0005885. <a href="https://doi.org/10.1371/journal.pntd.0005885">https://doi.org/10.1371/journal.pntd.0005885</a>
+</div>
+<div id="ref-ladd-acosta_presence_2016" class="csl-entry">
+Ladd-Acosta C, Shu C, Lee BK, Gidaya N, Singer A, Schieve LA, Schendel DE, Jones N, Daniels JL, Windham GC, et al. 2016-01. Presence of an epigenetic signature of prenatal cigarette smoke exposure in childhood. <em>Environmental Research</em>. 144:139–148. <a href="https://doi.org/10.1016/j.envres.2015.11.014">https://doi.org/10.1016/j.envres.2015.11.014</a>
+</div>
+<div id="ref-lee_chief_2019" class="csl-entry">
+Lee SH, Levin D, Finley PD, Heilig CM. 2019-05. Chief complaint classification with recurrent neural networks. <em>Journal of Biomedical Informatics</em>. 93:103158. <a href="https://doi.org/10.1016/j.jbi.2019.103158">https://doi.org/10.1016/j.jbi.2019.103158</a>
+</div>
+<div id="ref-lee_comparison_2019" class="csl-entry">
+Lee SH, Maenner MJ, Heilig CM. 2019-09. A comparison of machine learning algorithms for the surveillance of autism spectrum disorder. <em>PLoS ONE</em>. 14(9):e0222907. <a href="https://doi.org/10.1371/journal.pone.0222907">https://doi.org/10.1371/journal.pone.0222907</a>
+</div>
+<div id="ref-maenner_development_2016" class="csl-entry">
+Maenner MJ, Yeargin-Allsopp M, Van Naarden Braun K, Christensen DL, Schieve LA. 2016-12. Development of a machine learning algorithm for the surveillance of autism spectrum disorder. <em>PLoS ONE</em>. 11(12):e0168224. <a href="https://doi.org/10.1371/journal.pone.0168224">https://doi.org/10.1371/journal.pone.0168224</a>
+</div>
+<div id="ref-menon_multivariate_2014" class="csl-entry">
+Menon R, Bhat G, Saade GR, Spratt H. 2014-04. Multivariate adaptive regression splines analysis to predict biomarkers of spontaneous preterm birth. <em>Acta Obstetricia et Gynecologica Scandinavica</em>. 93(4):382–391. <a href="https://doi.org/10.1111/aogs.12344">https://doi.org/10.1111/aogs.12344</a>
+</div>
+<div id="ref-meyers_applying_2018" class="csl-entry">
+Meyers AR, Al-Tarawneh IS, Wurzelbacher SJ, Bushnell PT, Lampl MP, Bell JL, Bertke SJ, Robins DC, Tseng C-Y, Wei C, et al. 2018-01. Applying machine learning to workers’ compensation data to identify industry-specific ergonomic and safety prevention priorities: <span>Ohio</span>, 2001 to 2011. <em>Journal of Occupational and Environmental Medicine</em>. 60(1):55–73. <a href="https://doi.org/10.1097/JOM.0000000000001162">https://doi.org/10.1097/JOM.0000000000001162</a>
+</div>
+<div id="ref-petersen_super_2015" class="csl-entry">
+Petersen ML, LeDell E, Schwab J, Sarovar V, Gross R, Reynolds N, Haberer JE, Goggin K, Golin C, Arnsten J, et al. 2015-05. Super learner analysis of electronic adherence data improves viral prediction and may provide strategies for selective <span>HIV</span> <span>RNA</span> monitoring. <em>JAIDS Journal of Acquired Immune Deficiency Syndromes</em>. 69(1):109–118. <a href="https://doi.org/10.1097/QAI.0000000000000548">https://doi.org/10.1097/QAI.0000000000000548</a>
+</div>
+<div id="ref-rubaiyat_automatic_2016" class="csl-entry">
+Rubaiyat AHM, Toma TT, Kalantari-Khandani M, Rahman SA, Chen L, Ye Y, Pan CS. 2016-10. Automatic detection of helmet uses for construction safety. In: <em>2016 <span>IEEE</span>/<span>WIC</span>/<span>ACM</span> <span>International</span> <span>Conference</span> on <span>Web</span> <span>Intelligence</span> <span>Workshops</span> (<span>WIW</span>)</em>. Omaha, NE, USA: IEEE; p. 135–142. <a href="https://doi.org/10.1109/WIW.2016.045">https://doi.org/10.1109/WIW.2016.045</a>
+</div>
+<div id="ref-scientific_integrity_fast-track_action_committee_protecting_2022" class="csl-entry">
+Scientific Integrity Fast-Track Action Committee. 2022-01. Protecting the <span>Integrity</span> of <span>Government</span> <span>Science</span>. <a href="https://www.whitehouse.gov/wp-content/uploads/2022/01/01-22-Protecting_the_Integrity_of_Government_Science.pdf">https://www.whitehouse.gov/wp-content/uploads/2022/01/01-22-Protecting_the_Integrity_of_Government_Science.pdf</a>
+</div>
+<div id="ref-wheeler_bayesian_2019" class="csl-entry">
+Wheeler MW. 2019-03. Bayesian additive adaptive basis tensor product models for modeling high dimensional surfaces: An application to high-throughput toxicity testing. <em>Biometrics</em>. 75(1):193–201. <a href="https://doi.org/10.1111/biom.12942">https://doi.org/10.1111/biom.12942</a>
+</div>
+<div id="ref-yanamala_sparse_2018" class="csl-entry">
+Yanamala N, Orandle MS, Kodali VK, Bishop L, Zeidler-Erdely PC, Roberts JR, Castranova V, Erdely A. 2018-01. Sparse <span>Supervised</span> <span>Classification</span> <span>Methods</span> <span>Predict</span> and <span>Characterize</span> <span>Nanomaterial</span> <span>Exposures</span>: <span>Independent</span> <span>Markers</span> of <span>MWCNT</span> <span>Exposures</span>. <em>Toxicologic Pathology</em>. 46(1):14–27. <a href="https://doi.org/10.1177/0192623317730575">https://doi.org/10.1177/0192623317730575</a>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="i-get-to-do-data-science.html"><span class="header-section-number">7</span> I get to do data science</a></div>
+<div class="next"><a href="declaration.html"><span class="header-section-number">A</span> Declaration: a progressive culture for data in public health</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ml-ai"><span class="header-section-number">8</span> Machine learning and artificial intelligence</a></li>
+<li><a class="nav-link" href="#context-what-is-familiar-or-known"><span class="header-section-number">8.1</span> Context: what is familiar or known</a></li>
+<li>
+<a class="nav-link" href="#context-methodology"><span class="header-section-number">8.2</span> Context: methodology</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ml-and-statistics"><span class="header-section-number">8.2.1</span> ML and statistics</a></li>
+<li><a class="nav-link" href="#on-predictive-analytics-ml-and-ai"><span class="header-section-number">8.2.2</span> On “predictive analytics”, ML, and AI</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#context-history"><span class="header-section-number">8.3</span> Context: history</a></li>
+<li><a class="nav-link" href="#context-organizational-culture"><span class="header-section-number">8.4</span> Context: organizational culture</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>A culture for doing good things with data</strong>: The why, what, how, and who of a progressive culture for data in public health" was written by Chad Heilig. It was last built on 2023-10-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
