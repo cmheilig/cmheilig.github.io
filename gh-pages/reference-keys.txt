@@ -25,7 +25,7 @@ relational-learning
 formal-curricula-and-structured-programs
 doing
 staffing-in-a-progressive-culture-for-data
-data-science-staff-should-be-cultivated-hired-and-out-sourced
+data-science-staff-should-be-cultivated-hired-and-outsourced
 federal-employees
 fellows-and-other-learners
 nonfederal-collaborators
@@ -42,7 +42,7 @@ why-a-progressive-culture
 ml-ai
 context-what-is-familiar-or-known
 context-methodology
-ml-and-statistics
+machine-learning-and-statistics
 on-predictive-analytics-ml-and-ai
 context-history
 context-organizational-culture
